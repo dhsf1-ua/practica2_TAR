@@ -1,0 +1,6 @@
+Invoking command in '/workspace/ros2_ws/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspace/ros2_ws/src/turtlebot3/turtlebot3_cartographer -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws/install/turtlebot3_cartographer
+Invoked command in '/workspace/ros2_ws/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspace/ros2_ws/src/turtlebot3/turtlebot3_cartographer -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspace/ros2_ws/install/turtlebot3_cartographer
+Invoking command in '/workspace/ros2_ws/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspace/ros2_ws/build/turtlebot3_cartographer -- -j11 -l11
+Invoked command in '/workspace/ros2_ws/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspace/ros2_ws/build/turtlebot3_cartographer -- -j11 -l11
+Invoking command in '/workspace/ros2_ws/build/turtlebot3_cartographer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspace/ros2_ws/build/turtlebot3_cartographer
+Invoked command in '/workspace/ros2_ws/build/turtlebot3_cartographer' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspace/ros2_ws/build/turtlebot3_cartographer
