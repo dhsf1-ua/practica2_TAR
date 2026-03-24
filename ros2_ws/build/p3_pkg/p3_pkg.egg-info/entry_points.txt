@@ -1,0 +1,4 @@
+[console_scripts]
+dibuja_mov = p3_pkg.dibuja_mov:main
+movimiento = p3_pkg.movimiento:main
+

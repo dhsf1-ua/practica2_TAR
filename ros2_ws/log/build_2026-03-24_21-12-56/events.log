@@ -1,0 +1,192 @@
+[0.000000] (-) TimerEvent: {}
+[0.000842] (-) JobUnselected: {'identifier': 'turtlebot3'}
+[0.000979] (-) JobUnselected: {'identifier': 'turtlebot3_bringup'}
+[0.001052] (-) JobUnselected: {'identifier': 'turtlebot3_cartographer'}
+[0.001347] (-) JobUnselected: {'identifier': 'turtlebot3_description'}
+[0.001428] (-) JobUnselected: {'identifier': 'turtlebot3_example'}
+[0.001599] (-) JobUnselected: {'identifier': 'turtlebot3_fake_node'}
+[0.002958] (-) JobUnselected: {'identifier': 'turtlebot3_gazebo'}
+[0.003041] (-) JobUnselected: {'identifier': 'turtlebot3_manipulation_gazebo'}
+[0.003102] (-) JobUnselected: {'identifier': 'turtlebot3_msgs'}
+[0.003162] (-) JobUnselected: {'identifier': 'turtlebot3_navigation2'}
+[0.003222] (-) JobUnselected: {'identifier': 'turtlebot3_node'}
+[0.003285] (-) JobUnselected: {'identifier': 'turtlebot3_simulations'}
+[0.003346] (-) JobUnselected: {'identifier': 'turtlebot3_teleop'}
+[0.003418] (p3_pkg) JobQueued: {'identifier': 'p3_pkg', 'dependencies': OrderedDict()}
+[0.009167] (p3_pkg) JobStarted: {'identifier': 'p3_pkg'}
+[0.091772] (-) TimerEvent: {}
+[0.195117] (-) TimerEvent: {}
+[0.304708] (-) TimerEvent: {}
+[0.434003] (-) TimerEvent: {}
+[0.594766] (-) TimerEvent: {}
+[0.700766] (-) TimerEvent: {}
+[0.833921] (-) TimerEvent: {}
+[0.950352] (-) TimerEvent: {}
+[1.119832] (-) TimerEvent: {}
+[1.298019] (-) TimerEvent: {}
+[1.488833] (-) TimerEvent: {}
+[1.680019] (-) TimerEvent: {}
+[1.842215] (-) TimerEvent: {}
+[1.985248] (-) TimerEvent: {}
+[2.088371] (-) TimerEvent: {}
+[2.190727] (-) TimerEvent: {}
+[2.354660] (-) TimerEvent: {}
+[2.526700] (-) TimerEvent: {}
+[2.653750] (-) TimerEvent: {}
+[2.766876] (-) TimerEvent: {}
+[2.938735] (-) TimerEvent: {}
+[3.056629] (-) TimerEvent: {}
+[3.179577] (-) TimerEvent: {}
+[3.329045] (-) TimerEvent: {}
+[3.431117] (-) TimerEvent: {}
+[3.541668] (-) TimerEvent: {}
+[3.663097] (-) TimerEvent: {}
+[3.775606] (-) TimerEvent: {}
+[3.901478] (-) TimerEvent: {}
+[4.004513] (-) TimerEvent: {}
+[4.114918] (-) TimerEvent: {}
+[4.222048] (-) TimerEvent: {}
+[4.331810] (-) TimerEvent: {}
+[4.448830] (-) TimerEvent: {}
+[4.550105] (-) TimerEvent: {}
+[4.655326] (-) TimerEvent: {}
+[4.764836] (-) TimerEvent: {}
+[4.893088] (-) TimerEvent: {}
+[4.994390] (-) TimerEvent: {}
+[5.113071] (-) TimerEvent: {}
+[5.214706] (-) TimerEvent: {}
+[5.321443] (-) TimerEvent: {}
+[5.456875] (-) TimerEvent: {}
+[5.569000] (-) TimerEvent: {}
+[5.715726] (-) TimerEvent: {}
+[5.818421] (-) TimerEvent: {}
+[5.919744] (-) TimerEvent: {}
+[6.024959] (-) TimerEvent: {}
+[6.157557] (-) TimerEvent: {}
+[6.271182] (-) TimerEvent: {}
+[6.382518] (-) TimerEvent: {}
+[6.507234] (-) TimerEvent: {}
+[6.628706] (-) TimerEvent: {}
+[6.746729] (-) TimerEvent: {}
+[6.862200] (-) TimerEvent: {}
+[6.963948] (-) TimerEvent: {}
+[7.067167] (-) TimerEvent: {}
+[7.181117] (-) TimerEvent: {}
+[7.283130] (-) TimerEvent: {}
+[7.387285] (-) TimerEvent: {}
+[7.489089] (-) TimerEvent: {}
+[7.590245] (-) TimerEvent: {}
+[7.692006] (-) TimerEvent: {}
+[7.793444] (-) TimerEvent: {}
+[7.909766] (-) TimerEvent: {}
+[8.011356] (-) TimerEvent: {}
+[8.112208] (-) TimerEvent: {}
+[8.213935] (-) TimerEvent: {}
+[8.316107] (-) TimerEvent: {}
+[8.428298] (-) TimerEvent: {}
+[8.531438] (-) TimerEvent: {}
+[8.638514] (-) TimerEvent: {}
+[8.746466] (-) TimerEvent: {}
+[8.881480] (-) TimerEvent: {}
+[8.984264] (-) TimerEvent: {}
+[9.090843] (-) TimerEvent: {}
+[9.194844] (-) TimerEvent: {}
+[9.296287] (-) TimerEvent: {}
+[9.397859] (-) TimerEvent: {}
+[9.499178] (-) TimerEvent: {}
+[9.603099] (-) TimerEvent: {}
+[9.704408] (-) TimerEvent: {}
+[9.808107] (-) TimerEvent: {}
+[9.910347] (-) TimerEvent: {}
+[10.013343] (-) TimerEvent: {}
+[10.130194] (-) TimerEvent: {}
+[10.235445] (-) TimerEvent: {}
+[10.341831] (-) TimerEvent: {}
+[10.445555] (-) TimerEvent: {}
+[10.547557] (-) TimerEvent: {}
+[10.653773] (-) TimerEvent: {}
+[10.758144] (-) TimerEvent: {}
+[10.873576] (-) TimerEvent: {}
+[10.983261] (-) TimerEvent: {}
+[11.085917] (-) TimerEvent: {}
+[11.204988] (-) TimerEvent: {}
+[11.307336] (-) TimerEvent: {}
+[11.408439] (-) TimerEvent: {}
+[11.510830] (-) TimerEvent: {}
+[11.613561] (-) TimerEvent: {}
+[11.714894] (-) TimerEvent: {}
+[11.820745] (-) TimerEvent: {}
+[11.926303] (-) TimerEvent: {}
+[12.029861] (-) TimerEvent: {}
+[12.136010] (-) TimerEvent: {}
+[12.288572] (-) TimerEvent: {}
+[12.422861] (-) TimerEvent: {}
+[12.535961] (-) TimerEvent: {}
+[12.754582] (-) TimerEvent: {}
+[12.970197] (-) TimerEvent: {}
+[13.103438] (-) TimerEvent: {}
+[13.316812] (-) TimerEvent: {}
+[13.462919] (-) TimerEvent: {}
+[13.564762] (-) TimerEvent: {}
+[13.680168] (-) TimerEvent: {}
+[13.785878] (-) TimerEvent: {}
+[13.896994] (-) TimerEvent: {}
+[13.946099] (p3_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/p3_pkg', 'build', '--build-base', '/workspace/ros2_ws/build/p3_pkg/build', 'install', '--record', '/workspace/ros2_ws/build/p3_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspace/ros2_ws/src/p3_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'HOSTNAME': 'gca21-VirtualBox', 'LIBGL_DEBUG': 'verbose', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/workspace/ros2_ws/install/turtlebot3_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/gca21-docker', 'OLDPWD': '/workspace/ros2_ws/src', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'COLCON_PREFIX_PATH': '/workspace/ros2_ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': '/opt/ros/humble/share', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/workspace/ros2_ws/install/turtlebot3:/workspace/ros2_ws/install/turtlebot3_teleop:/workspace/ros2_ws/install/turtlebot3_simulations:/workspace/ros2_ws/install/turtlebot3_bringup:/workspace/ros2_ws/install/turtlebot3_node:/workspace/ros2_ws/install/turtlebot3_navigation2:/workspace/ros2_ws/install/turtlebot3_fake_node:/workspace/ros2_ws/install/turtlebot3_example:/workspace/ros2_ws/install/turtlebot3_msgs:/workspace/ros2_ws/install/turtlebot3_manipulation_gazebo:/workspace/ros2_ws/install/turtlebot3_gazebo:/workspace/ros2_ws/install/turtlebot3_description:/workspace/ros2_ws/install/turtlebot3_cartographer:/opt/ros/humble', 'DEBIAN_FRONTEND': 'noninteractive', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/workspace/ros2_ws/build/p3_pkg', 'GAZEBO_PLUGIN_PATH': '/opt/ros/humble/lib', 'PYTHONPATH': '/workspace/ros2_ws/build/p3_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages:/workspace/ros2_ws/build/turtlebot3_teleop:/workspace/ros2_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/workspace/ros2_ws/build/turtlebot3_example:/workspace/ros2_ws/install/turtlebot3_example/lib/python3.10/site-packages:/workspace/ros2_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'TZ': 'Europe/Madrid', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/ros2_ws/install/turtlebot3:/workspace/ros2_ws/install/turtlebot3_simulations:/workspace/ros2_ws/install/turtlebot3_bringup:/workspace/ros2_ws/install/turtlebot3_node:/workspace/ros2_ws/install/turtlebot3_navigation2:/workspace/ros2_ws/install/turtlebot3_fake_node:/workspace/ros2_ws/install/turtlebot3_msgs:/workspace/ros2_ws/install/turtlebot3_manipulation_gazebo:/workspace/ros2_ws/install/turtlebot3_gazebo:/workspace/ros2_ws/install/turtlebot3_description:/workspace/ros2_ws/install/turtlebot3_cartographer'}, 'shell': False}
+[14.015059] (-) TimerEvent: {}
+[14.156100] (-) TimerEvent: {}
+[14.259769] (-) TimerEvent: {}
+[14.423952] (-) TimerEvent: {}
+[14.595877] (-) TimerEvent: {}
+[15.092419] (p3_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[15.092822] (-) TimerEvent: {}
+[15.094977] (p3_pkg) StdoutLine: {'line': b'creating ../../build/p3_pkg/p3_pkg.egg-info\n'}
+[15.096318] (p3_pkg) StdoutLine: {'line': b'writing ../../build/p3_pkg/p3_pkg.egg-info/PKG-INFO\n'}
+[15.097106] (p3_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/p3_pkg/p3_pkg.egg-info/dependency_links.txt\n'}
+[15.097309] (p3_pkg) StdoutLine: {'line': b'writing entry points to ../../build/p3_pkg/p3_pkg.egg-info/entry_points.txt\n'}
+[15.097779] (p3_pkg) StdoutLine: {'line': b'writing requirements to ../../build/p3_pkg/p3_pkg.egg-info/requires.txt\n'}
+[15.098486] (p3_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/p3_pkg/p3_pkg.egg-info/top_level.txt\n'}
+[15.104066] (p3_pkg) StdoutLine: {'line': b"writing manifest file '../../build/p3_pkg/p3_pkg.egg-info/SOURCES.txt'\n"}
+[15.110036] (p3_pkg) StdoutLine: {'line': b"reading manifest file '../../build/p3_pkg/p3_pkg.egg-info/SOURCES.txt'\n"}
+[15.110710] (p3_pkg) StdoutLine: {'line': b"writing manifest file '../../build/p3_pkg/p3_pkg.egg-info/SOURCES.txt'\n"}
+[15.115873] (p3_pkg) StdoutLine: {'line': b'running build\n'}
+[15.116352] (p3_pkg) StdoutLine: {'line': b'running build_py\n'}
+[15.117270] (p3_pkg) StdoutLine: {'line': b'creating /workspace/ros2_ws/build/p3_pkg/build\n'}
+[15.117470] (p3_pkg) StdoutLine: {'line': b'creating /workspace/ros2_ws/build/p3_pkg/build/lib\n'}
+[15.117631] (p3_pkg) StdoutLine: {'line': b'creating /workspace/ros2_ws/build/p3_pkg/build/lib/p3_pkg\n'}
+[15.117773] (p3_pkg) StdoutLine: {'line': b'copying p3_pkg/movimiento.py -> /workspace/ros2_ws/build/p3_pkg/build/lib/p3_pkg\n'}
+[15.117913] (p3_pkg) StdoutLine: {'line': b'copying p3_pkg/dibuja_mov.py -> /workspace/ros2_ws/build/p3_pkg/build/lib/p3_pkg\n'}
+[15.118063] (p3_pkg) StdoutLine: {'line': b'copying p3_pkg/__init__.py -> /workspace/ros2_ws/build/p3_pkg/build/lib/p3_pkg\n'}
+[15.120454] (p3_pkg) StdoutLine: {'line': b'running install\n'}
+[15.123297] (p3_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[15.129923] (p3_pkg) StdoutLine: {'line': b'creating /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg\n'}
+[15.131242] (p3_pkg) StdoutLine: {'line': b'copying /workspace/ros2_ws/build/p3_pkg/build/lib/p3_pkg/movimiento.py -> /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg\n'}
+[15.131536] (p3_pkg) StdoutLine: {'line': b'copying /workspace/ros2_ws/build/p3_pkg/build/lib/p3_pkg/dibuja_mov.py -> /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg\n'}
+[15.131641] (p3_pkg) StdoutLine: {'line': b'copying /workspace/ros2_ws/build/p3_pkg/build/lib/p3_pkg/__init__.py -> /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg\n'}
+[15.133305] (p3_pkg) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg/movimiento.py to movimiento.cpython-310.pyc\n'}
+[15.137696] (p3_pkg) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg/dibuja_mov.py to dibuja_mov.cpython-310.pyc\n'}
+[15.186815] (p3_pkg) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg/__init__.py to __init__.cpython-310.pyc\n'}
+[15.187190] (p3_pkg) StdoutLine: {'line': b'running install_data\n'}
+[15.187349] (p3_pkg) StdoutLine: {'line': b'creating /workspace/ros2_ws/install/p3_pkg/share/ament_index\n'}
+[15.187492] (p3_pkg) StdoutLine: {'line': b'creating /workspace/ros2_ws/install/p3_pkg/share/ament_index/resource_index\n'}
+[15.187735] (p3_pkg) StdoutLine: {'line': b'creating /workspace/ros2_ws/install/p3_pkg/share/ament_index/resource_index/packages\n'}
+[15.187885] (p3_pkg) StdoutLine: {'line': b'copying resource/p3_pkg -> /workspace/ros2_ws/install/p3_pkg/share/ament_index/resource_index/packages\n'}
+[15.188028] (p3_pkg) StdoutLine: {'line': b'copying package.xml -> /workspace/ros2_ws/install/p3_pkg/share/p3_pkg\n'}
+[15.188167] (p3_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[15.188303] (p3_pkg) StdoutLine: {'line': b'Copying ../../build/p3_pkg/p3_pkg.egg-info to /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg-0.0.0-py3.10.egg-info\n'}
+[15.188443] (p3_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[15.195503] (-) TimerEvent: {}
+[15.241062] (p3_pkg) StdoutLine: {'line': b'Installing dibuja_mov script to /workspace/ros2_ws/install/p3_pkg/lib/p3_pkg\n'}
+[15.254515] (p3_pkg) StdoutLine: {'line': b'Installing movimiento script to /workspace/ros2_ws/install/p3_pkg/lib/p3_pkg\n'}
+[15.254914] (p3_pkg) StdoutLine: {'line': b"writing list of installed files to '/workspace/ros2_ws/build/p3_pkg/install.log'\n"}
+[15.305464] (-) TimerEvent: {}
+[15.344700] (p3_pkg) CommandEnded: {'returncode': 0}
+[15.409608] (-) TimerEvent: {}
+[15.514032] (-) TimerEvent: {}
+[15.626045] (-) TimerEvent: {}
+[15.769900] (-) TimerEvent: {}
+[15.947934] (-) TimerEvent: {}
+[16.051372] (-) TimerEvent: {}
+[16.158345] (-) TimerEvent: {}
+[16.300723] (p3_pkg) JobEnded: {'identifier': 'p3_pkg', 'rc': 0}
+[16.324042] (-) TimerEvent: {}
+[16.336148] (-) EventReactorShutdown: {}
