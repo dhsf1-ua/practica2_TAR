@@ -1,87 +1,211 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
 import sys
 import math
 import time
+from rclpy.qos import QoSProfile, ReliabilityPolicy
 
-class RobotController(Node):
-    def __init__(self, opcion):
-        super().__init__('movimiento_node')
-        self.publisher = self.create_publisher(Twist, '/cmd_vel', 10)
-        self.opcion = opcion
-        # Esperamos a que todo cargue antes de empezar
-        self.get_logger().info(f'Iniciando opción de movimiento: {opcion}')
-        time.sleep(2.0)
-        self.ejecutar_logica()
 
-    def detener(self):
-        self.publisher.publish(Twist())
+def euler_from_quaternion(x, y, z, w):
+    """Convierte quaternion a ángulos de Euler (roll, pitch, yaw)."""
+    siny_cosp = 2 * (w * z + x * y)
+    cosy_cosp = 1 - 2 * (y * y + z * z)
+    yaw = math.atan2(siny_cosp, cosy_cosp)
+    return yaw
+
+
+class MovimientoRobot(Node):
+
+    def __init__(self):
+        super().__init__('movimiento_robot')
+
+        self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
+
+        qos = QoSProfile(depth=10, reliability=ReliabilityPolicy.BEST_EFFORT)
+        self.odom_sub = self.create_subscription(
+            Odometry, '/odom', self.odom_callback, qos)
+
+        self.pos_x = 0.0
+        self.pos_y = 0.0
+        self.yaw = 0.0
+        self.odom_received = False
+
+    def odom_callback(self, msg):
+        self.pos_x = msg.pose.pose.position.x
+        self.pos_y = msg.pose.pose.position.y
+        q = msg.pose.pose.orientation
+        self.yaw = euler_from_quaternion(q.x, q.y, q.z, q.w)
+        self.odom_received = True
+
+    def wait_for_odom(self):
+        """Espera hasta recibir el primer mensaje de odometría."""
+        self.get_logger().info('Esperando odometría...')
+        while not self.odom_received:
+            rclpy.spin_once(self, timeout_sec=0.1)
+
+    def stop(self):
+        msg = Twist()
+        self.publisher_.publish(msg)
         time.sleep(0.5)
 
-    def mover_lineal(self, distancia, velocidad=0.2):
+    def move_linear(self, distance, speed=0.2):
+        """Avanza 'distance' metros usando odometría."""
+        self.wait_for_odom()
+        rclpy.spin_once(self, timeout_sec=0.1)
+
+        start_x = self.pos_x
+        start_y = self.pos_y
+        self.get_logger().info(f'Iniciando movimiento lineal: {distance} m')
+
         msg = Twist()
-        msg.linear.x = velocidad
-        tiempo = abs(distancia / velocidad)
-        self.publisher.publish(msg)
-        time.sleep(tiempo)
-        self.detener()
+        msg.linear.x = speed if distance >= 0 else -speed
+        target = abs(distance)
 
-    def girar(self, grados, vel_angular=0.4):
+        while True:
+            rclpy.spin_once(self, timeout_sec=0.05)
+            traveled = math.sqrt(
+                (self.pos_x - start_x) ** 2 +
+                (self.pos_y - start_y) ** 2
+            )
+            self.publisher_.publish(msg)
+            if traveled >= target:
+                break
+
+        self.stop()
+        self.get_logger().info(f'Movimiento lineal completado.')
+
+    def rotate(self, angle_rad, speed=0.5):
+        """Gira 'angle_rad' radianes (positivo = izquierda/antihorario)."""
+        self.wait_for_odom()
+        rclpy.spin_once(self, timeout_sec=0.1)
+
+        start_yaw = self.yaw
+        target_angle = abs(angle_rad)
+        direction = 1.0 if angle_rad >= 0 else -1.0
+        self.get_logger().info(f'Iniciando giro: {math.degrees(angle_rad):.1f}°')
+
         msg = Twist()
-        rad = math.radians(grados)
-        msg.angular.z = vel_angular if rad > 0 else -vel_angular
-        tiempo = abs(rad / vel_angular)
-        self.publisher.publish(msg)
-        time.sleep(tiempo)
-        self.detener()
+        msg.angular.z = direction * speed
+        accumulated = 0.0
+        prev_yaw = start_yaw
 
-    def dibujar_circulo(self, tiempo, sentido_horario=False):
-        # Para el infinito: combinación de lineal y angular
-        msg = Twist()
-        msg.linear.x = 0.2
-        msg.angular.z = -0.4 if sentido_horario else 0.4
-        self.publisher.publish(msg)
-        time.sleep(tiempo)
-        self.detener()
+        while True:
+            rclpy.spin_once(self, timeout_sec=0.05)
+            delta = self.yaw - prev_yaw
 
-    def ejecutar_logica(self):
-        if self.opcion == 0:
-            self.mover_lineal(2.0)
-            
-        elif self.opcion == 1: # Triángulo equilátero (3m)
-            for _ in range(3):
-                self.mover_lineal(3.0)
-                self.girar(120) # 120 grados para que el ángulo interno sea 60
+            # Normalizar delta al rango [-pi, pi]
+            while delta > math.pi:
+                delta -= 2 * math.pi
+            while delta < -math.pi:
+                delta += 2 * math.pi
 
-        elif self.opcion == 2: # Cuadrado (1m)
-            for _ in range(4):
-                self.mover_lineal(1.0)
-                self.girar(90)
+            accumulated += abs(delta)
+            prev_yaw = self.yaw
+            self.publisher_.publish(msg)
 
-        elif self.opcion == 3: # Infinito
-            self.mover_lineal(0.5)
-            self.girar(60)
-            # Dibujamos dos círculos para simular el infinito
-            self.dibujar_circulo(15.7, sentido_horario=False)
-            self.dibujar_circulo(15.7, sentido_horario=True)
+            if accumulated >= target_angle:
+                break
 
-        self.get_logger().info('Movimiento completado.')
-        raise SystemExit
+        self.stop()
+        self.get_logger().info(f'Giro completado.')
+
+    # ------------------------------------------------------------------
+    # Movimiento 0: Avanzar 2 metros en línea recta
+    # ------------------------------------------------------------------
+    def mov_0_lineal(self):
+        self.get_logger().info('=== MOV 0: Avance lineal 2 m ===')
+        self.move_linear(2.0)
+
+    # ------------------------------------------------------------------
+    # Movimiento 1: Triángulo equilátero (lado = 3 m)
+    # Ángulo exterior de un triángulo = 120° = 2π/3 rad
+    # ------------------------------------------------------------------
+    def mov_1_triangulo(self):
+        self.get_logger().info('=== MOV 1: Triángulo equilátero (lado 3 m) ===')
+        for i in range(3):
+            self.get_logger().info(f'Lado {i + 1}/3')
+            self.move_linear(3.0)
+            self.rotate(math.radians(120))
+
+    # ------------------------------------------------------------------
+    # Movimiento 2: Cuadrado (lado = 1 m)
+    # Ángulo exterior = 90° = π/2 rad
+    # ------------------------------------------------------------------
+    def mov_2_cuadrado(self):
+        self.get_logger().info('=== MOV 2: Cuadrado (lado 1 m) ===')
+        for i in range(4):
+            self.get_logger().info(f'Lado {i + 1}/4')
+            self.move_linear(1.0)
+            self.rotate(math.radians(90))
+
+    def mov_3_infinito(self):
+        self.get_logger().info('=== MOV 3: Infinito (8 acostado) ===')
+
+        # La figura: dos triángulos laterales unidos en el origen.
+        # El robot empieza en el vértice central mirando "arriba".
+        #
+        # Triángulo derecho:
+        #   avanzar 0.5m, girar -60° (derecha), avanzar 0.5m, girar -60°,
+        #   avanzar 0.5m, girar -60° → vuelve al centro mirando "arriba" de nuevo
+        #
+        # Triángulo izquierdo: igual pero girando +60° (izquierda)
+
+        # Paso inicial indicado por el enunciado
+        self.move_linear(0.5)
+        self.rotate(math.radians(-120))  # -60° (hacia la derecha)
+
+        self.move_linear(1)
+        self.rotate(math.radians(120))
+
+        self.move_linear(0.5)
+        self.rotate(math.radians(120))
+        self.move_linear(1)
+
+
 
 def main():
-    rclpy.init()
     if len(sys.argv) < 2:
-        print("Error: Indica un número (0, 1, 2, 3)")
-        return
-    
+        print('Uso: ros2 run p3_pkg movimiento.py <0|1|2|3>')
+        print('  0: Avance lineal 2 m')
+        print('  1: Triángulo equilátero (lado 3 m)')
+        print('  2: Cuadrado (lado 1 m)')
+        print('  3: Figura en infinito')
+        sys.exit(1)
+
     opcion = int(sys.argv[1])
-    node = RobotController(opcion)
+
+    rclpy.init()
+    nodo = MovimientoRobot()
+
+    # Dar tiempo al nodo a suscribirse y recibir odometría
+    time.sleep(1.0)
+
+    movimientos = {
+        0: nodo.mov_0_lineal,
+        1: nodo.mov_1_triangulo,
+        2: nodo.mov_2_cuadrado,
+        3: nodo.mov_3_infinito,
+    }
+
+    if opcion not in movimientos:
+        nodo.get_logger().error(f'Opción inválida: {opcion}. Usa 0, 1, 2 o 3.')
+        nodo.destroy_node()
+        rclpy.shutdown()
+        sys.exit(1)
+
     try:
-        rclpy.spin(node)
-    except SystemExit:
-        pass
-    rclpy.shutdown()
+        movimientos[opcion]()
+    except KeyboardInterrupt:
+        nodo.get_logger().info('Interrumpido por el usuario.')
+    finally:
+        nodo.stop()
+        nodo.destroy_node()
+        rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()

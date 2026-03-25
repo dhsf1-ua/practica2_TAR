@@ -1,0 +1,25 @@
+[4.805s] Invoking command in '/workspace/ros2_ws/src/p3_pkg': PYTHONPATH=/workspace/ros2_ws/build/p3_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/p3_pkg build --build-base /workspace/ros2_ws/build/p3_pkg/build install --record /workspace/ros2_ws/build/p3_pkg/install.log --single-version-externally-managed install_data
+[5.949s] running egg_info
+[5.950s] writing ../../build/p3_pkg/p3_pkg.egg-info/PKG-INFO
+[5.951s] writing dependency_links to ../../build/p3_pkg/p3_pkg.egg-info/dependency_links.txt
+[5.951s] writing entry points to ../../build/p3_pkg/p3_pkg.egg-info/entry_points.txt
+[5.957s] writing requirements to ../../build/p3_pkg/p3_pkg.egg-info/requires.txt
+[5.957s] writing top-level names to ../../build/p3_pkg/p3_pkg.egg-info/top_level.txt
+[5.959s] reading manifest file '../../build/p3_pkg/p3_pkg.egg-info/SOURCES.txt'
+[5.961s] writing manifest file '../../build/p3_pkg/p3_pkg.egg-info/SOURCES.txt'
+[5.976s] running build
+[5.976s] running build_py
+[5.977s] copying p3_pkg/movimiento.py -> /workspace/ros2_ws/build/p3_pkg/build/lib/p3_pkg
+[5.977s] running install
+[5.977s] running install_lib
+[5.977s] copying /workspace/ros2_ws/build/p3_pkg/build/lib/p3_pkg/movimiento.py -> /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg
+[5.979s] byte-compiling /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg/movimiento.py to movimiento.cpython-310.pyc
+[5.984s] running install_data
+[5.985s] running install_egg_info
+[5.990s] removing '/workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+[5.991s] Copying ../../build/p3_pkg/p3_pkg.egg-info to /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg-0.0.0-py3.10.egg-info
+[5.993s] running install_scripts
+[6.055s] Installing dibuja_mov script to /workspace/ros2_ws/install/p3_pkg/lib/p3_pkg
+[6.057s] Installing movimiento script to /workspace/ros2_ws/install/p3_pkg/lib/p3_pkg
+[6.063s] writing list of installed files to '/workspace/ros2_ws/build/p3_pkg/install.log'
+[6.256s] Invoked command in '/workspace/ros2_ws/src/p3_pkg' returned '0': PYTHONPATH=/workspace/ros2_ws/build/p3_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/p3_pkg build --build-base /workspace/ros2_ws/build/p3_pkg/build install --record /workspace/ros2_ws/build/p3_pkg/install.log --single-version-externally-managed install_data

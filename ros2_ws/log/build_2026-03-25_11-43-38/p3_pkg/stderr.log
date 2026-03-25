@@ -1,0 +1,5 @@
+  File "/workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg/movimiento.py", line 1
+    kkimport rclpy
+             ^^^^^
+SyntaxError: invalid syntax
+

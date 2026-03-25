@@ -1,0 +1,23 @@
+running egg_info
+writing ../../build/p3_pkg/p3_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/p3_pkg/p3_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/p3_pkg/p3_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/p3_pkg/p3_pkg.egg-info/requires.txt
+writing top-level names to ../../build/p3_pkg/p3_pkg.egg-info/top_level.txt
+reading manifest file '../../build/p3_pkg/p3_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/p3_pkg/p3_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+copying p3_pkg/movimiento.py -> /workspace/ros2_ws/build/p3_pkg/build/lib/p3_pkg
+running install
+running install_lib
+copying /workspace/ros2_ws/build/p3_pkg/build/lib/p3_pkg/movimiento.py -> /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg
+byte-compiling /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg/movimiento.py to movimiento.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/p3_pkg/p3_pkg.egg-info to /workspace/ros2_ws/install/p3_pkg/lib/python3.10/site-packages/p3_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing dibuja_mov script to /workspace/ros2_ws/install/p3_pkg/lib/p3_pkg
+Installing movimiento script to /workspace/ros2_ws/install/p3_pkg/lib/p3_pkg
+writing list of installed files to '/workspace/ros2_ws/build/p3_pkg/install.log'
