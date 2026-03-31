@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
@@ -42,7 +41,6 @@ class MovimientoRobot(Node):
         self.odom_received = True
 
     def wait_for_odom(self):
-        """Espera hasta recibir el primer mensaje de odometría."""
         self.get_logger().info('Esperando odometría...')
         while not self.odom_received:
             rclpy.spin_once(self, timeout_sec=0.1)
@@ -53,7 +51,6 @@ class MovimientoRobot(Node):
         time.sleep(0.5)
 
     def move_linear(self, distance, speed=0.2):
-        """Avanza 'distance' metros usando odometría."""
         self.wait_for_odom()
         rclpy.spin_once(self, timeout_sec=0.1)
 
@@ -113,75 +110,64 @@ class MovimientoRobot(Node):
         self.stop()
         self.get_logger().info(f'Giro completado.')
 
-    # ------------------------------------------------------------------
-    # Movimiento 0: Avanzar 2 metros en línea recta
-    # ------------------------------------------------------------------
-    def mov_0_lineal(self):
-        self.get_logger().info('=== MOV 0: Avance lineal 2 m ===')
-        self.move_linear(2.0)
+    def mov_0_lineal(self, repeticiones=1):
+        self.get_logger().info(f'=== MOV 0: Avance lineal 2 m (x{repeticiones}) ===')
+        for r in range(repeticiones):
+            self.get_logger().info(f'Repetición {r + 1}/{repeticiones}')
+            self.move_linear(2.0)
 
-    # ------------------------------------------------------------------
-    # Movimiento 1: Triángulo equilátero (lado = 3 m)
-    # Ángulo exterior de un triángulo = 120° = 2π/3 rad
-    # ------------------------------------------------------------------
-    def mov_1_triangulo(self):
-        self.get_logger().info('=== MOV 1: Triángulo equilátero (lado 3 m) ===')
-        for i in range(3):
-            self.get_logger().info(f'Lado {i + 1}/3')
-            self.move_linear(3.0)
+    def mov_1_triangulo(self, repeticiones=1):
+        self.get_logger().info(f'=== MOV 1: Triángulo equilátero (lado 3 m) (x{repeticiones}) ===')
+        for r in range(repeticiones):
+            self.get_logger().info(f'Repetición {r + 1}/{repeticiones}')
+            for i in range(3):
+                self.get_logger().info(f'Lado {i + 1}/3')
+                self.move_linear(3.0)
+                self.rotate(math.radians(120))
+
+    def mov_2_cuadrado(self, repeticiones=1):
+        self.get_logger().info(f'=== MOV 2: Cuadrado (lado 1 m) (x{repeticiones}) ===')
+        for r in range(repeticiones):
+            self.get_logger().info(f'Repetición {r + 1}/{repeticiones}')
+            for i in range(4):
+                self.get_logger().info(f'Lado {i + 1}/4')
+                self.move_linear(1.0)
+                self.rotate(math.radians(90))
+
+    def mov_3_infinito(self, repeticiones=1):
+        self.get_logger().info(f'=== MOV 3: Infinito (8 acostado) (x{repeticiones}) ===')
+        for r in range(repeticiones):
+            self.get_logger().info(f'Repetición {r + 1}/{repeticiones}')
+            self.move_linear(0.5)
+            self.rotate(math.radians(-120))
+            self.move_linear(1)
             self.rotate(math.radians(120))
-
-    # ------------------------------------------------------------------
-    # Movimiento 2: Cuadrado (lado = 1 m)
-    # Ángulo exterior = 90° = π/2 rad
-    # ------------------------------------------------------------------
-    def mov_2_cuadrado(self):
-        self.get_logger().info('=== MOV 2: Cuadrado (lado 1 m) ===')
-        for i in range(4):
-            self.get_logger().info(f'Lado {i + 1}/4')
-            self.move_linear(1.0)
-            self.rotate(math.radians(90))
-
-    def mov_3_infinito(self):
-        self.get_logger().info('=== MOV 3: Infinito (8 acostado) ===')
-
-        # La figura: dos triángulos laterales unidos en el origen.
-        # El robot empieza en el vértice central mirando "arriba".
-        #
-        # Triángulo derecho:
-        #   avanzar 0.5m, girar -60° (derecha), avanzar 0.5m, girar -60°,
-        #   avanzar 0.5m, girar -60° → vuelve al centro mirando "arriba" de nuevo
-        #
-        # Triángulo izquierdo: igual pero girando +60° (izquierda)
-
-        # Paso inicial indicado por el enunciado
-        self.move_linear(0.5)
-        self.rotate(math.radians(-120))  # -60° (hacia la derecha)
-
-        self.move_linear(1)
-        self.rotate(math.radians(120))
-
-        self.move_linear(0.5)
-        self.rotate(math.radians(120))
-        self.move_linear(1)
-
+            self.move_linear(0.5)
+            self.rotate(math.radians(120))
+            self.move_linear(1)
+            self.rotate(math.radians(-120))
 
 
 def main():
     if len(sys.argv) < 2:
-        print('Uso: ros2 run p3_pkg movimiento.py <0|1|2|3>')
+        print('Uso: ros2 run p3_pkg movimiento.py <0|1|2|3> [repeticiones]')
         print('  0: Avance lineal 2 m')
         print('  1: Triángulo equilátero (lado 3 m)')
         print('  2: Cuadrado (lado 1 m)')
         print('  3: Figura en infinito')
+        print('  repeticiones: número de veces a repetir la figura (por defecto 1)')
         sys.exit(1)
 
     opcion = int(sys.argv[1])
+    repeticiones = int(sys.argv[2]) if len(sys.argv) >= 3 else 1
+
+    if repeticiones < 1:
+        print('Error: el número de repeticiones debe ser al menos 1.')
+        sys.exit(1)
 
     rclpy.init()
     nodo = MovimientoRobot()
 
-    # Dar tiempo al nodo a suscribirse y recibir odometría
     time.sleep(1.0)
 
     movimientos = {
@@ -198,7 +184,7 @@ def main():
         sys.exit(1)
 
     try:
-        movimientos[opcion]()
+        movimientos[opcion](repeticiones)
     except KeyboardInterrupt:
         nodo.get_logger().info('Interrumpido por el usuario.')
     finally:
