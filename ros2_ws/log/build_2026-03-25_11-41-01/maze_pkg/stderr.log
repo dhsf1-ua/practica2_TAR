@@ -1,0 +1,5 @@
+  File "/workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages/maze_pkg/res_maze.py", line 149
+    self.right_wall_acquired
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+

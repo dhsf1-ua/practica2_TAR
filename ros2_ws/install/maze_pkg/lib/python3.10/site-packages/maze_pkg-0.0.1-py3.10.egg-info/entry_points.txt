@@ -1,0 +1,3 @@
+[console_scripts]
+res_maze = maze_pkg.res_maze:main
+

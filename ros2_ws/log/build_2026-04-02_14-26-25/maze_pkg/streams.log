@@ -1,0 +1,22 @@
+[0.928s] Invoking command in '/workspace/ros2_ws/src/maze_pkg': AMENT_PREFIX_PATH=/workspace/ros2_ws/install/turtlebot3_gazebo:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspace/ros2_ws/install/turtlebot3_gazebo PYTHONPATH=/workspace/ros2_ws/build/maze_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/maze_pkg build --build-base /workspace/ros2_ws/build/maze_pkg/build install --record /workspace/ros2_ws/build/maze_pkg/install.log --single-version-externally-managed install_data
+[1.251s] running egg_info
+[1.251s] writing ../../build/maze_pkg/maze_pkg.egg-info/PKG-INFO
+[1.251s] writing dependency_links to ../../build/maze_pkg/maze_pkg.egg-info/dependency_links.txt
+[1.256s] writing entry points to ../../build/maze_pkg/maze_pkg.egg-info/entry_points.txt
+[1.256s] writing requirements to ../../build/maze_pkg/maze_pkg.egg-info/requires.txt
+[1.259s] writing top-level names to ../../build/maze_pkg/maze_pkg.egg-info/top_level.txt
+[1.260s] reading manifest file '../../build/maze_pkg/maze_pkg.egg-info/SOURCES.txt'
+[1.264s] writing manifest file '../../build/maze_pkg/maze_pkg.egg-info/SOURCES.txt'
+[1.264s] running build
+[1.264s] running build_py
+[1.264s] running install
+[1.264s] running install_lib
+[1.264s] running install_data
+[1.265s] copying launch/custom_maze.launch.py -> /workspace/ros2_ws/install/maze_pkg/share/maze_pkg/launch
+[1.265s] running install_egg_info
+[1.265s] removing '/workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages/maze_pkg-0.0.1-py3.10.egg-info' (and everything under it)
+[1.265s] Copying ../../build/maze_pkg/maze_pkg.egg-info to /workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages/maze_pkg-0.0.1-py3.10.egg-info
+[1.265s] running install_scripts
+[1.298s] Installing res_maze script to /workspace/ros2_ws/install/maze_pkg/lib/maze_pkg
+[1.298s] writing list of installed files to '/workspace/ros2_ws/build/maze_pkg/install.log'
+[1.321s] Invoked command in '/workspace/ros2_ws/src/maze_pkg' returned '0': AMENT_PREFIX_PATH=/workspace/ros2_ws/install/turtlebot3_gazebo:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/workspace/ros2_ws/install/turtlebot3_gazebo PYTHONPATH=/workspace/ros2_ws/build/maze_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/maze_pkg build --build-base /workspace/ros2_ws/build/maze_pkg/build install --record /workspace/ros2_ws/build/maze_pkg/install.log --single-version-externally-managed install_data

@@ -1,0 +1,55 @@
+[0.000000] (-) TimerEvent: {}
+[0.000112] (-) JobUnselected: {'identifier': 'turtlebot3'}
+[0.000177] (-) JobUnselected: {'identifier': 'turtlebot3_bringup'}
+[0.000201] (-) JobUnselected: {'identifier': 'turtlebot3_cartographer'}
+[0.000228] (-) JobUnselected: {'identifier': 'turtlebot3_description'}
+[0.000254] (-) JobUnselected: {'identifier': 'turtlebot3_example'}
+[0.000305] (-) JobUnselected: {'identifier': 'turtlebot3_fake_node'}
+[0.000330] (-) JobUnselected: {'identifier': 'turtlebot3_gazebo'}
+[0.000355] (-) JobUnselected: {'identifier': 'turtlebot3_manipulation_gazebo'}
+[0.000379] (-) JobUnselected: {'identifier': 'turtlebot3_msgs'}
+[0.000401] (-) JobUnselected: {'identifier': 'turtlebot3_navigation2'}
+[0.000425] (-) JobUnselected: {'identifier': 'turtlebot3_node'}
+[0.000442] (-) JobUnselected: {'identifier': 'turtlebot3_simulations'}
+[0.000464] (-) JobUnselected: {'identifier': 'turtlebot3_teleop'}
+[0.000490] (maze_pkg) JobQueued: {'identifier': 'maze_pkg', 'dependencies': OrderedDict([('turtlebot3_gazebo', '/workspace/ros2_ws/install/turtlebot3_gazebo')])}
+[0.000529] (maze_pkg) JobStarted: {'identifier': 'maze_pkg'}
+[0.097578] (-) TimerEvent: {}
+[0.197829] (-) TimerEvent: {}
+[0.299380] (-) TimerEvent: {}
+[0.400592] (-) TimerEvent: {}
+[0.500817] (-) TimerEvent: {}
+[0.603361] (-) TimerEvent: {}
+[0.704301] (-) TimerEvent: {}
+[0.804640] (-) TimerEvent: {}
+[0.904961] (-) TimerEvent: {}
+[0.925506] (maze_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/maze_pkg', 'build', '--build-base', '/workspace/ros2_ws/build/maze_pkg/build', 'install', '--record', '/workspace/ros2_ws/build/maze_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspace/ros2_ws/src/maze_pkg', 'env': {'HOSTNAME': 'carlos', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/carlos-docker', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'AMENT_PREFIX_PATH': '/workspace/ros2_ws/install/turtlebot3_gazebo:/opt/ros/humble', 'DEBIAN_FRONTEND': 'noninteractive', 'PWD': '/workspace/ros2_ws/build/maze_pkg', 'PYTHONPATH': '/workspace/ros2_ws/build/maze_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'TZ': 'Europe/Madrid', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/ros2_ws/install/turtlebot3_gazebo'}, 'shell': False}
+[1.006450] (-) TimerEvent: {}
+[1.108789] (-) TimerEvent: {}
+[1.209191] (-) TimerEvent: {}
+[1.276859] (maze_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[1.277226] (maze_pkg) StdoutLine: {'line': b'writing ../../build/maze_pkg/maze_pkg.egg-info/PKG-INFO\n'}
+[1.277388] (maze_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/maze_pkg/maze_pkg.egg-info/dependency_links.txt\n'}
+[1.278349] (maze_pkg) StdoutLine: {'line': b'writing entry points to ../../build/maze_pkg/maze_pkg.egg-info/entry_points.txt\n'}
+[1.278433] (maze_pkg) StdoutLine: {'line': b'writing requirements to ../../build/maze_pkg/maze_pkg.egg-info/requires.txt\n'}
+[1.278494] (maze_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/maze_pkg/maze_pkg.egg-info/top_level.txt\n'}
+[1.280661] (maze_pkg) StdoutLine: {'line': b"reading manifest file '../../build/maze_pkg/maze_pkg.egg-info/SOURCES.txt'\n"}
+[1.282251] (maze_pkg) StdoutLine: {'line': b"writing manifest file '../../build/maze_pkg/maze_pkg.egg-info/SOURCES.txt'\n"}
+[1.283356] (maze_pkg) StdoutLine: {'line': b'running build\n'}
+[1.283559] (maze_pkg) StdoutLine: {'line': b'running build_py\n'}
+[1.283679] (maze_pkg) StdoutLine: {'line': b'copying maze_pkg/res_maze.py -> /workspace/ros2_ws/build/maze_pkg/build/lib/maze_pkg\n'}
+[1.288555] (maze_pkg) StdoutLine: {'line': b'running install\n'}
+[1.288690] (maze_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[1.288774] (maze_pkg) StdoutLine: {'line': b'copying /workspace/ros2_ws/build/maze_pkg/build/lib/maze_pkg/res_maze.py -> /workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages/maze_pkg\n'}
+[1.288858] (maze_pkg) StdoutLine: {'line': b'byte-compiling /workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages/maze_pkg/res_maze.py to res_maze.cpython-310.pyc\n'}
+[1.291854] (maze_pkg) StdoutLine: {'line': b'running install_data\n'}
+[1.292010] (maze_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.294343] (maze_pkg) StdoutLine: {'line': b"removing '/workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages/maze_pkg-0.0.1-py3.10.egg-info' (and everything under it)\n"}
+[1.294499] (maze_pkg) StdoutLine: {'line': b'Copying ../../build/maze_pkg/maze_pkg.egg-info to /workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages/maze_pkg-0.0.1-py3.10.egg-info\n'}
+[1.296095] (maze_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[1.309338] (-) TimerEvent: {}
+[1.326383] (maze_pkg) StdoutLine: {'line': b'Installing res_maze script to /workspace/ros2_ws/install/maze_pkg/lib/maze_pkg\n'}
+[1.328882] (maze_pkg) StdoutLine: {'line': b"writing list of installed files to '/workspace/ros2_ws/build/maze_pkg/install.log'\n"}
+[1.370018] (maze_pkg) CommandEnded: {'returncode': 0}
+[1.387379] (maze_pkg) JobEnded: {'identifier': 'maze_pkg', 'rc': 0}
+[1.387886] (-) EventReactorShutdown: {}

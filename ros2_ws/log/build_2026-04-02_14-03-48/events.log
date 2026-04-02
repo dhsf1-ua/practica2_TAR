@@ -1,0 +1,48 @@
+[0.000000] (-) TimerEvent: {}
+[0.000137] (-) JobUnselected: {'identifier': 'turtlebot3'}
+[0.000161] (-) JobUnselected: {'identifier': 'turtlebot3_bringup'}
+[0.000173] (-) JobUnselected: {'identifier': 'turtlebot3_cartographer'}
+[0.000184] (-) JobUnselected: {'identifier': 'turtlebot3_description'}
+[0.000193] (-) JobUnselected: {'identifier': 'turtlebot3_example'}
+[0.000205] (-) JobUnselected: {'identifier': 'turtlebot3_fake_node'}
+[0.000215] (-) JobUnselected: {'identifier': 'turtlebot3_gazebo'}
+[0.000225] (-) JobUnselected: {'identifier': 'turtlebot3_manipulation_gazebo'}
+[0.000237] (-) JobUnselected: {'identifier': 'turtlebot3_msgs'}
+[0.000247] (-) JobUnselected: {'identifier': 'turtlebot3_navigation2'}
+[0.000258] (-) JobUnselected: {'identifier': 'turtlebot3_node'}
+[0.000269] (-) JobUnselected: {'identifier': 'turtlebot3_simulations'}
+[0.000279] (-) JobUnselected: {'identifier': 'turtlebot3_teleop'}
+[0.000292] (maze_pkg) JobQueued: {'identifier': 'maze_pkg', 'dependencies': OrderedDict([('turtlebot3_gazebo', '/workspace/ros2_ws/install/turtlebot3_gazebo')])}
+[0.004938] (maze_pkg) JobStarted: {'identifier': 'maze_pkg'}
+[0.100859] (-) TimerEvent: {}
+[0.201395] (-) TimerEvent: {}
+[0.301890] (-) TimerEvent: {}
+[0.402192] (-) TimerEvent: {}
+[0.502608] (-) TimerEvent: {}
+[0.602943] (-) TimerEvent: {}
+[0.701624] (maze_pkg) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/maze_pkg', 'build', '--build-base', '/workspace/ros2_ws/build/maze_pkg/build', 'install', '--record', '/workspace/ros2_ws/build/maze_pkg/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/workspace/ros2_ws/src/maze_pkg', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'HOSTNAME': 'carlos', 'LIBGL_DEBUG': 'verbose', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/workspace/ros2_ws/install/turtlebot3_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/carlos-docker', 'OLDPWD': '/workspace', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'COLCON_PREFIX_PATH': '/workspace/ros2_ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'GAZEBO_MODEL_PATH': '/opt/ros/humble/share', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/workspace/ros2_ws/install/turtlebot3:/workspace/ros2_ws/install/turtlebot3_teleop:/workspace/ros2_ws/install/turtlebot3_simulations:/workspace/ros2_ws/install/turtlebot3_bringup:/workspace/ros2_ws/install/turtlebot3_node:/workspace/ros2_ws/install/turtlebot3_navigation2:/workspace/ros2_ws/install/turtlebot3_fake_node:/workspace/ros2_ws/install/turtlebot3_example:/workspace/ros2_ws/install/turtlebot3_msgs:/workspace/ros2_ws/install/turtlebot3_manipulation_gazebo:/workspace/ros2_ws/install/maze_pkg:/workspace/ros2_ws/install/turtlebot3_gazebo:/workspace/ros2_ws/install/turtlebot3_description:/workspace/ros2_ws/install/turtlebot3_cartographer:/opt/ros/humble', 'DEBIAN_FRONTEND': 'noninteractive', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/workspace/ros2_ws/build/maze_pkg', 'GAZEBO_PLUGIN_PATH': '/opt/ros/humble/lib', 'PYTHONPATH': '/workspace/ros2_ws/build/maze_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages:/workspace/ros2_ws/build/turtlebot3_teleop:/workspace/ros2_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:/workspace/ros2_ws/build/turtlebot3_example:/workspace/ros2_ws/install/turtlebot3_example/lib/python3.10/site-packages:/workspace/ros2_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages:/workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'TZ': 'Europe/Madrid', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/workspace/ros2_ws/install/turtlebot3_gazebo:/workspace/ros2_ws/install/turtlebot3:/workspace/ros2_ws/install/turtlebot3_simulations:/workspace/ros2_ws/install/turtlebot3_bringup:/workspace/ros2_ws/install/turtlebot3_node:/workspace/ros2_ws/install/turtlebot3_navigation2:/workspace/ros2_ws/install/turtlebot3_fake_node:/workspace/ros2_ws/install/turtlebot3_msgs:/workspace/ros2_ws/install/turtlebot3_manipulation_gazebo:/workspace/ros2_ws/install/turtlebot3_description:/workspace/ros2_ws/install/turtlebot3_cartographer'}, 'shell': False}
+[0.706276] (-) TimerEvent: {}
+[0.807751] (-) TimerEvent: {}
+[0.908593] (-) TimerEvent: {}
+[0.925613] (maze_pkg) StdoutLine: {'line': b'running egg_info\n'}
+[0.926735] (maze_pkg) StdoutLine: {'line': b'writing ../../build/maze_pkg/maze_pkg.egg-info/PKG-INFO\n'}
+[0.927078] (maze_pkg) StdoutLine: {'line': b'writing dependency_links to ../../build/maze_pkg/maze_pkg.egg-info/dependency_links.txt\n'}
+[0.927710] (maze_pkg) StdoutLine: {'line': b'writing entry points to ../../build/maze_pkg/maze_pkg.egg-info/entry_points.txt\n'}
+[0.927855] (maze_pkg) StdoutLine: {'line': b'writing requirements to ../../build/maze_pkg/maze_pkg.egg-info/requires.txt\n'}
+[0.927895] (maze_pkg) StdoutLine: {'line': b'writing top-level names to ../../build/maze_pkg/maze_pkg.egg-info/top_level.txt\n'}
+[0.928637] (maze_pkg) StdoutLine: {'line': b"reading manifest file '../../build/maze_pkg/maze_pkg.egg-info/SOURCES.txt'\n"}
+[0.929336] (maze_pkg) StdoutLine: {'line': b"writing manifest file '../../build/maze_pkg/maze_pkg.egg-info/SOURCES.txt'\n"}
+[0.929704] (maze_pkg) StdoutLine: {'line': b'running build\n'}
+[0.929751] (maze_pkg) StdoutLine: {'line': b'running build_py\n'}
+[0.930191] (maze_pkg) StdoutLine: {'line': b'running install\n'}
+[0.930255] (maze_pkg) StdoutLine: {'line': b'running install_lib\n'}
+[0.931299] (maze_pkg) StdoutLine: {'line': b'running install_data\n'}
+[0.931956] (maze_pkg) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.933488] (maze_pkg) StdoutLine: {'line': b"removing '/workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages/maze_pkg-0.0.1-py3.10.egg-info' (and everything under it)\n"}
+[0.936755] (maze_pkg) StdoutLine: {'line': b'Copying ../../build/maze_pkg/maze_pkg.egg-info to /workspace/ros2_ws/install/maze_pkg/lib/python3.10/site-packages/maze_pkg-0.0.1-py3.10.egg-info\n'}
+[0.936879] (maze_pkg) StdoutLine: {'line': b'running install_scripts\n'}
+[0.954185] (maze_pkg) StdoutLine: {'line': b'Installing res_maze script to /workspace/ros2_ws/install/maze_pkg/lib/maze_pkg\n'}
+[0.954614] (maze_pkg) StdoutLine: {'line': b"writing list of installed files to '/workspace/ros2_ws/build/maze_pkg/install.log'\n"}
+[0.970977] (maze_pkg) CommandEnded: {'returncode': 0}
+[0.983192] (maze_pkg) JobEnded: {'identifier': 'maze_pkg', 'rc': 0}
+[0.984093] (-) EventReactorShutdown: {}
