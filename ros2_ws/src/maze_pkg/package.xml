@@ -2,6 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>maze_pkg</name>
+<<<<<<< HEAD
   <version>0.0.1</version>
   <description>Resolucion autonoma de laberintos con Turtlebot 3 usando LiDAR.</description>
 
@@ -19,6 +20,21 @@
   <exec_depend>launch_ros</exec_depend>
   <exec_depend>ros2launch</exec_depend>
   <exec_depend>turtlebot3_gazebo</exec_depend>
+=======
+  <version>0.0.0</version>
+  <description>TODO: Package description</description>
+  <maintainer email="daniel-docker@todo.todo">daniel-docker</maintainer>
+  <license>TODO: License declaration</license>
+
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+>>>>>>> c9c271dc55f8cd94745a69edee69e28ffaf32bd6
 
   <export>
     <build_type>ament_python</build_type>

@@ -18,6 +18,7 @@
       <real_time_factor>1</real_time_factor>
     </physics>
 
+<<<<<<< HEAD
     <gui fullscreen='0'>
       <camera name='user_camera'>
         <pose frame=''>0.0 0.0 8.0 0 1.45 0</pose>
@@ -26,6 +27,8 @@
       </camera>
     </gui>
 
+=======
+>>>>>>> c9c271dc55f8cd94745a69edee69e28ffaf32bd6
 
     <model name="wall_0">
       <static>true</static>
